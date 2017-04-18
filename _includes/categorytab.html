@@ -1,0 +1,103 @@
+					<div class="category-tab"><!--category-tab-->
+						<div class="col-sm-12">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="#sepatu" data-toggle="tab" title="Sepatu">Sepatu</a></li>
+								<li><a href="#jaket" data-toggle="tab" title="Jaket">Jaket</a></li>
+								<li><a href="#sandal" data-toggle="tab" title="Sandal">Sandal</a></li>
+								<li><a href="#tas" data-toggle="tab" title="Tas">Tas</a></li>
+								<li><a href="#celana" data-toggle="tab" title="Celana">Celana</a></li>
+							</ul>
+						</div>
+						<div class="tab-content">
+							<div class="tab-pane fade active in" id="sepatu" >
+	  							{% assign cat = "ct-sepatu" %}
+	  							{% for mypost in site.tags[cat] %}
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="{{ mypost.image }}" alt="{{ mypost.product }}" title="{{ mypost.product }}" />
+												<p>{{ mypost.price }}</p>
+												<h2>{{ mypost.product }}</h2>
+												<a href="{{ site.url }}/{{ mypost.permalink }}" class="btn btn-default add-to-cart" title="Beli"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>											
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+
+							<div class="tab-pane fade" id="jaket" >
+	  							{% assign cat = "ct-jaket" %}
+	  							{% for mypost in site.tags[cat] %}
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="{{ mypost.image }}" alt="{{ mypost.product }}" title="{{ mypost.product }}" />
+												<p>{{ mypost.price }}</p>
+												<h2>{{ mypost.product }}</h2>
+												<a href="{{ site.url }}/{{ mypost.permalink }}" class="btn btn-default add-to-cart" title="Beli"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>											
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+
+							<div class="tab-pane fade" id="sandal" >
+	  							{% assign cat = "ct-sandal" %}
+	  							{% for mypost in site.tags[cat] %}
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="{{ mypost.image }}" alt="{{ mypost.product }}" title="{{ mypost.product }}" />
+												<p>{{ mypost.price }}</p>
+												<h2>{{ mypost.product }}</h2>
+												<a href="{{ site.url }}/{{ mypost.permalink }}" class="btn btn-default add-to-cart" title="Beli"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>											
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+
+							<div class="tab-pane fade" id="tas" >
+	  							{% assign cat = "ct-tas" %}
+	  							{% for mypost in site.tags[cat] %}
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="{{ mypost.image }}" alt="{{ mypost.product }}" title="{{ mypost.product }}" />
+												<p>{{ mypost.price }}</p>
+												<h2>{{ mypost.product }}</h2>
+												<a href="{{ site.url }}/{{ mypost.permalink }}" class="btn btn-default add-to-cart" title="Beli"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>											
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+
+							<div class="tab-pane fade" id="celana" >
+	  							{% assign cat = "ct-celana" %}
+	  							{% for mypost in site.tags[cat] %}
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="{{ mypost.image }}" alt="{{ mypost.product }}" title="{{ mypost.product }}" />
+												<p>{{ mypost.price }}</p>
+												<h2>{{ mypost.product }}</h2>
+												<a href="{{ site.url }}/{{ mypost.permalink }}" class="btn btn-default add-to-cart" title="Beli"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>											
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+							
+						</div>
+					</div><!--/category-tab-->

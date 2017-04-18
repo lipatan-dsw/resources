@@ -1,0 +1,68 @@
+					<div class="recommended_items"><!--recommended_items-->
+						<h2 class="title text-center">Recommended</h2>
+						
+						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="item active">
+		  							{% assign cat = "recommended1" %}
+		  							{% for mypost in site.categories[cat] %}	
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="{{ mypost.image }}" alt="{{ mypost.product }}" title="{{ mypost.product }}" />
+													<p>{{ mypost.price }}</p>
+													<h2>{{ mypost.product }}</h2>
+													<a href="{{ site.url }}/{{ mypost.permalink }}" class="btn btn-default add-to-cart" title="Beli"><i class="fa fa-shopping-cart"></i>Beli</a>
+												</div>												
+											</div>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+
+								<div class="item">
+		  							{% assign cat = "recommended2" %}
+		  							{% for mypost in site.categories[cat] %}	
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="{{ mypost.image }}" alt="{{ mypost.product }}" title="{{ mypost.product }}" />
+													<p>{{ mypost.price }}</p>
+													<h2>{{ mypost.product }}</h2>
+													<a href="{{ site.url }}/{{ mypost.permalink }}" class="btn btn-default add-to-cart" title="Beli"><i class="fa fa-shopping-cart"></i>Beli</a>
+												</div>												
+											</div>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+
+								<div class="item">
+		  							{% assign cat = "recommended3" %}
+		  							{% for mypost in site.categories[cat] %}	
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="{{ mypost.image }}" alt="{{ mypost.product }}" title="{{ mypost.product }}" />
+													<p>{{ mypost.price }}</p>
+													<h2>{{ mypost.product }}</h2>
+													<a href="{{ site.url }}/{{ mypost.permalink }}" class="btn btn-default add-to-cart" title="Beli"><i class="fa fa-shopping-cart"></i>Beli</a>
+												</div>												
+											</div>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+
+							</div>
+							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev" title="Previous">
+								<i class="fa fa-angle-left"></i>
+							  </a>
+							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next" title="Next">
+								<i class="fa fa-angle-right"></i>
+							  </a>			
+						</div>
+					</div><!--/recommended_items-->

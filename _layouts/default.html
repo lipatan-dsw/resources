@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="id">
+
+  {% include head.html %}
+
+  <body>
+    <header id="header"><!--header-->
+      {% include headertop.html %}
+      {% include headermiddle.html %}
+      {% include headerbuttom.html %}
+    </header><!--/header-->
+        
+        {{ content }}
+    
+    {% include footer.html %}
+    {% include popup.html %}
+
+  </body>
+
+</html>

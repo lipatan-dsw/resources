@@ -1,0 +1,29 @@
+---
+layout: blog
+---
+
+					<div class="blog-post-area">
+						<h2 class="title text-center">Blog LIPATAN</h2>
+						<div class="single-blog-post">
+							<h1 style="color: #696763; font-size: 22px; font-family: 'Roboto',sans-serif; font-weight: 500; margin-top: 22px; margin-bottom: 17px;"><b>{{ page.title }}</b></h1>
+							<div class="post-meta">
+								<ul>
+									<li><i class="fa fa-user"></i> {{ site.author }}</li>
+									<li><i class="fa fa-calendar"></i> {{ page.date | date: "%b %-d, %Y" }}</li>
+								</ul>
+								<span>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-half-o"></i>
+								</span>
+							</div>
+							<div id="ratajustify">
+								{{ content }}
+								{% include share.html %}
+								{% include disqus.html %}
+							</div>							
+						</div>
+						{% include recommendeditems.html %}
+					</div>

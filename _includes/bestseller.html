@@ -1,0 +1,26 @@
+					<div class="features_items"><!--features_items-->
+						<h2 class="title text-center">Best Seller</h2>
+						{% assign cat = "bestseller" %}
+  						{% for mypost in site.categories[cat] %}
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+										<div class="productinfo text-center">
+											<img src="{{ mypost.image }}" alt="{{ mypost.product }}" title="{{ mypost.product }}" />
+											<p>{{ mypost.price }}</p>
+											<h2>{{ mypost.product }}</h2>
+											<a href="{{ site.url }}/{{ mypost.permalink }}" class="btn btn-default add-to-cart" title="Beli"><i class="fa fa-shopping-cart"></i>Beli</a>
+										</div>
+										<div class="product-overlay">
+											<div class="overlay-content">
+												<p>{{ mypost.price }}</p>
+												<h2>{{ mypost.product }}</h2>
+												<a href="{{ site.url }}/{{ mypost.permalink }}" class="btn btn-default add-to-cart" title="Beli"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+						
+					</div><!--features_items-->
