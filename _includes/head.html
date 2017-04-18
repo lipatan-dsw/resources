@@ -1,7 +1,7 @@
 <head><!--head-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="{{ page.url | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
     
     <title>{%if page.title %}{{ page.title }} - {{ site.title }} {% else %}{{ site.title }} - {{ site.description }}{% endif %}</title>
     <meta name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
@@ -10,7 +10,7 @@
     <meta property="og:type" content="article" />
 	<meta property="og:title" content="{%if page.title %}{{ page.title }} - {{ site.title }} {% else %}{{ site.title }}{% endif %}" />
 	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+	<meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
 	<meta property="og:image" content= "{%if page.image %}{{ page.image }}{% else %}{{ site.url }}/{{ site.logo-square }}{% endif %}" />
 	<meta property="og:site_name" content="{{ site.title }}" />
 
@@ -29,8 +29,8 @@
 	    "headline": "{%if page.title %}{{ page.title }} - {{ site.title }} {% else %}{{ site.title }} - {{ site.description }}{% endif %}",
 	    {%if page.image %}"image": "{{ page.image }}",{% else %}"image": "{{site.url}}/{{ site.logo-square }}",{% endif %}
 	    "description": "{% if page.description %}{{ page.description}}{% else %}{{ site.description}}{% endif %}",
-	    "logo": "{{ site.url }}/{{ site.logo-square }}",
-	    "url": "{{ site.url }}{{ page.url }}"
+	    "logo": "{%if page.image %}{{ page.image }}{% else %}{{ site.url }}/{{ site.logo-square }}{% endif %}",
+	    "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}"
 	  }
 	</script>
 
