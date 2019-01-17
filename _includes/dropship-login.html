@@ -1,0 +1,24 @@
+<style type="text/css">
+	#HIDDENDIV {
+    display: none;
+	}
+
+	#table.show tr > *:nth-child(1) {
+    display: block;
+	}
+</style>
+
+<div id="passw">
+    <input type="password" id="password" onkeydown="if (event.keyCode == 13) document.getElementById('button').click()" /> <!-- IMPORTANT! this part is so if you click enter, it works. -->
+            
+    <input id="button" type="button" value="Login Dropshipper" onclick="if (document.getElementById('password').value == 'LIPATAN369') { 
+document.getElementById('table').classList.toggle('show');   document.getElementById('passw').style.display='none'; } 
+else {  alert('Invalid Password!'); password.setSelectionRange(0, password.value.length);   } " />
+<!-- it will autoselect wrong input if wrong -->
+</div>
+
+<table id="table">
+    <tr> 
+        <td id="HIDDENDIV"><i style="background-color: #5bc0de; color: #ffffff; padding: 5px; margin-bottom: 3px; text-align: center; display: inline-block; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">Harga Beli Dropshipper : Rp 20000, Harga Jual Minimal : Rp 25000, Harga Jual Rekomendasi : Rp 40000</i></td>        
+    </tr>
+</table>
