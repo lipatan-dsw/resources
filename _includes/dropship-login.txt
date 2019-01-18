@@ -1,0 +1,22 @@
+<style type="text/css">
+	#HIDDENDIV {
+    display: none;
+	}
+
+	#table.show tr > *:nth-child(1) {
+    display: block;
+	}
+</style>
+
+<div id="passw">
+    <input style="border: 2px solid #5bc0de; padding: 5px; text-align: center; display: inline-block; margin-bottom: 3px; border-radius: 4px;" type="password" id="password" onkeydown="if (event.keyCode == 13) document.getElementById('button').click()" /> <!-- IMPORTANT! this part is so if you click enter, it works. -->
+            
+    <input style="background-color: #5bc0de; border: none; color: #ffffff; padding: 5px; text-align: center; text-decoration: none; display: inline-block; margin-bottom: 3px; cursor: pointer; border-radius: 4px;" id="button" type="button" value="Login Dropshipper" onclick="if (document.getElementById('password').value == 'Lipatan369!') {document.getElementById('table').classList.toggle('show'); document.getElementById('passw').style.display='none'; } else {  alert('Password Salah!'); password.setSelectionRange(0, password.value.length);}" />
+		<!-- it will autoselect wrong input if wrong -->
+</div>
+
+<table id="table">
+    <tr> 
+        <td id="HIDDENDIV"><i style="background-color: #5bc0de; color: #ffffff; padding: 5px; margin-bottom: 3px; text-align: center; display: inline-block; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">Harga Beli Dropshipper : {{ page.hargadropship }}, Harga Jual Minimal : {{ page.minimalprice }}, Harga Jual Rekomendasi : {{ page.price }}</i></td>        
+    </tr>
+</table>
